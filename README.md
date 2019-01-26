@@ -12,6 +12,8 @@ git clone ...
 docker build --build-arg BUILD_FROM=alpine:3.8 -t meross-carlosatta .
 ```
 
+(rem: removed BUILD_FROM for now to build image with docker hub)
+
 Try it:
 ```sh
 docker run --rm --name="meross-carlosatta" \
