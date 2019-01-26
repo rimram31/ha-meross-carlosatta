@@ -1,0 +1,48 @@
+{
+  "name": "Hassio Meross",
+  "version": "0.1.2",
+  "slug": "hassio_meross",
+  "description": "Hassio addon for Meross device using MQTT and autodiscovery.",
+  "startup": "services",
+  "boot": "auto",
+  "options": {
+    "mqtt": {
+      "host": "192.168.1.41",
+      "port": "1883",
+      "protocol": "mqtt",
+      "username": "",
+      "password": "",
+      "rejectUnauthorized": false
+    },
+    "topic": {
+      "discovery_prefix": "homeassistant"
+    },
+    "meross": {
+      "email": "didier.chaumond@gmail.com",
+      "password": "atcrh764"
+    },
+    "devices": {
+      "refresh": 10000
+    }
+  },
+  "schema": {
+    "mqtt": {
+      "host": "str",
+      "port": "port",
+      "protocol": "match(^(mqtt|mqtts|ws|wss)$)",
+      "username": "str",
+      "password": "str",
+      "rejectUnauthorized": "bool"
+    },
+    "topic": {
+      "discovery_prefix": "str"
+    },
+    "meross": {
+      "email": "str",
+      "password": "str"
+    },
+    "devices": {
+      "refresh": "int"
+    }
+  }
+}
